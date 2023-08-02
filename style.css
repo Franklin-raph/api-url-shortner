@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik";
+}
+
+html,body{
+    overflow: hidden;
+    /* cursor: url("./Printable-Department-ID-Card.jpg") !important; */
+}
+
+p, i{
+    color: #525252;;
+}
+
+i{
+    cursor: pointer;
+}
+
+.ri-arrow-down-s-fill{
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+    position: relative;
+}
+
+.logo .ri-link{
+    background-color: #fff;
+    box-shadow: 0 0 50px #d9d9d9;
+    font-size: 3rem;
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 999;
+    color: #1ac888;
+}
+
+.ri-github-fill{
+    color: #1ac888;
+    font-size: 1.8rem;
+    top: 20%;
+    right: 50%;
+    position: absolute;
+    z-index: 998;
+    background-color: #fff;
+    width: 0;
+    text-align: end;
+    border-radius: 50px;
+    padding: 2px;
+    transition: .8s;
+}
+
+.ri-mail-fill{
+    color: #1ac888;
+    font-size: 1.6rem;
+    top: 20%;
+    left: 40%;
+    position: absolute;
+    z-index: 998;
+    background-color: #fff;
+    width: 0;
+    text-align: start;
+    border-radius: 50px;
+    padding: 2px;
+    transition: .8s;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgb(245, 245, 245);
+    padding: 2rem 0;
+}
+
+main .input-button{
+    width: 65%;
+    box-shadow: 0 0 50px #d9d9d9;
+    padding: 2rem 0;
+    border-radius: 10px;
+    position: relative;
+    top: -18%;
+    margin: 2rem 0 0;
+}
+
+main .input-button div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+.input-button p{
+    text-align: center;
+    margin-top: 16px;
+    color: hsl(0, 87%, 67%);
+}
+
+main .input-button input[type="text"]{
+    border: 1px solid #dbdbdb;
+    outline: none;
+    padding: 10px;
+    width: 75%;
+}
+
+main .input-button button{
+    all: unset;
+    padding: 9px 20px;
+    background-color: #1ac888;
+    color: #fff;
+    cursor: pointer;
+}
+
+.url-text-div div div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+main .link-header{
+    width: 65%;
+    margin: -5rem auto 0;
+    border: 1px solid rgb(202, 202, 202);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px 8px 0 0;
+}
+
+main .link-header button{
+    cursor: pointer;
+}
+
+main .link-container::-webkit-scrollbar {
+    display: none;
+}
+
+main .link-container {
+    width: 100%;
+    position: relative;
+    top: 0%;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+main .url-text-div{
+    text-align: left;
+    border-bottom: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    width: 65%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+    /* left: .6%; */
+    overflow: hidden;
+}
+
+main .long-url{
+    width: 550px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.actions i{
+    font-size: 18px;
+    border: 1px solid rgb(202, 202, 202);
+    padding: 3px;
+}
+
+.placeHolderError::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: hsl(0, 87%, 67%);
+    opacity: 1; /* Firefox */
+  }
+
+.borderError{
+    border: 1px solid hsl(0, 87%, 67%) !important;
+    border-right: none !important;
+  }
+
+  .fa-circle-notch, .link-container.showlinks{
+    display: none;
+}
+
+.copiedMessage{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ac888;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    padding: 5px 0;
+    width: 10% !important;
+}
+
+.copiedMessage i{
+    margin-right: 5px; 
+    color: #fff; 
+    font-size: 1.2rem;
+}
+
+.copiedMessage p{
+    font-size: 14px;
+    color: #fff !important;
+    margin-top: 0;
+}
+
+.qrCodeGenerator{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000de;
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+.qrCodeGenerator i{
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    top: 25%;
+    right: 40.9%;
+}
+
+
+.linkModalBg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000de;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.linkModal{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 40%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.linkModal div{
+    margin: 30px 0;
+    border-bottom: 1px solid #c6c6c6db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.linkModal div ul{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ri-close-circle-fill{
+    position: absolute;
+    top: 23%;
+    right: 30%;
+    font-size: 25px;
+    color: #fff;
+}
+
+@media screen and (max-width:992px) {
+    main .input-button{
+        padding: 2rem;
+        width: 80%;
+    }
+
+    main .link-header, main .url-text-div{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    main .input-button, main .link-header, main .url-text-div{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:578px) {
+    main .input-button{
+        margin-bottom: 2rem;
+    }
+
+    main .input-button div{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    main .input-button input[type="text"]{
+        width: 100%;
+    }
+
+    main .link-header, main .url-text-div{
+        width: 91%;
+        left: 0;
+    }
+
+    main .input-button button{
+        width: 91%;
+        text-align: center;
+    }
+
+    .borderError{
+        border-right: 1px solid hsl(0, 87%, 67%) !important;
+    }
+
+    main .long-url{
+        font-size: 13px;
+        width: 300px;
+    }
+
+    main .shortLink{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    main .long-url{
+        width: 200px;
+    }
+
+    main .input-button button{
+        width: 84%;
+    }
+}

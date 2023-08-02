@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <title>API URL SHORTNER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <main>
+        <div class="logo">
+            <a href="mailto:igboekwulusifranklin@gmail.com">
+                <i class="ri-mail-fill"></i>
+            </a>
+            <i class="ri-link"></i>
+            <a href="https://www.github.com/franklin-raph" target="_blank">
+                <i class="ri-github-fill"></i>
+            </a>
+        </div>
+        <div class="input-button">
+            <div>
+                <input type="text" placeholder="shorten a link here...">
+                <button>
+                    <h4>Shorten It</h4>
+                    <i class="fa-solid fa-circle-notch fa-spin" style="color: #fff;"></i>
+                </button>
+            </div>
+            <p class="error"></p>
+        </div>
+        <div class="link-header">
+            <p>All Links</p>
+            <i class="ri-arrow-down-s-fill"></i>
+        </div>
+        <div class="link-container"></div>
+
+        <div class="qrCodeGenerator">
+            <i class="ri-close-fill"></i>
+            <img src="" alt="">
+        </div>
+
+        <div class="linkModalBg">
+            <i class="ri-close-circle-fill"></i>
+            <div class="copiedMessage">
+                <i class="ri-checkbox-circle-line"></i>
+                <p>Link Copied</p>
+            </div>
+            <div class="linkModal">
+                <div>
+                    <p>Truncated Long Link:</p>
+                    <p class="long-link"></p>
+                </div>
+                <div>
+                    <p>Short Link</p>
+                    <ul>
+                        <p class="short-link"></p>
+                        <i class="ri-clipboard-fill"></i>
+                    </ul>
+                </div>
+                <div>
+                    <p>Generate Qr Code <span class="long-link"></span> </p>
+                    <i class="ri-qr-code-line"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/main.js"></script>
+</body>
+</html>
